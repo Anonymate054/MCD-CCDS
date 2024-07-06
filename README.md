@@ -35,7 +35,9 @@ conda install -c conda-forge cookiecutter
 ```
 
 Then, generate a new project:
+```bash
 cookiecutter https://github.com/Anonymate054/MCD-CCDS.git
+```
 
 Follow the prompts to customize your project.
 
