@@ -22,6 +22,50 @@ from {{ cookiecutter.project_module_name }}.utils.paths import data_dir
 data_dir()
 ```
 
+### Considerations and Example:
+
+Consider the stucture like: 
+
+- mypackage/
+    - __init__.py
+- hello/
+    - __init__.py
+    - hello.py
+- goodbye/
+    - __init__.py
+    - goodbye.py
+- utils/
+    - __init__.py
+    - utils.py
+- Notebook/
+    - Test.ipynb
+- setup.py
+
+Therefore the `setup.py` file must be like:
+
+```python
+from setuptools import setup, find_packages
+
+setup(
+    name='mypackage',
+    version='0.1',
+    packages=find_packages(include=['mypackage', 'hello', 'goodbye', 'utils']),
+    include_package_data=True,
+)
+```
+
+And for importation modules
+
+```python
+from hello.hello import Hello
+from goodbye.goodbye import Goodbye
+from utils.utils import Utils
+
+print(Hello())
+print(Goodbye())
+print(Utils())
+
+```
 ## Set up Git diff for notebooks and lab
 
 We use [nbdime](https://nbdime.readthedocs.io/en/stable/index.html) for diffing and merging Jupyter notebooks.
