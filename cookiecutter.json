@@ -10,5 +10,5 @@
     "python_version": "3.11",
     "project_version": "0.1.0",
     "project_module_name" : "module",
-    "open_source_license": ["No license file", "MIT", "BSD-3-Clause"]
+    "project_open_source_license": ["No license file", "MIT", "BSD-3-Clause"]
 }
