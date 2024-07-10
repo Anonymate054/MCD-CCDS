@@ -1,6 +1,6 @@
 # Data Science Project Template
 
-This repository aims to provide a template for data science projects, inspired by [cookiecutter-conda-data-science](https://github.com/jvelezmagic/cookiecutter-conda-data-science/tree/main).
+This repository aims to provide a template for data science projects, inspired by [cookiecutter-conda-data-science](https://github.com/jvelezmagic/cookiecutter-conda-data-science/tree/main) and [cookiecutter-data-science](https://github.com/drivendataorg/cookiecutter-data-science).
 
 ## Overview
 
