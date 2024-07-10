@@ -42,6 +42,7 @@ activate {{ cookiecutter.project_slug }}
 or 
 
 ```bash
+conda install -c conda-forge mamba
 mamba env create -f environment.yml
 activate {{ cookiecutter.project_slug }}
 ```
