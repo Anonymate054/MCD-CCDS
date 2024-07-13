@@ -39,6 +39,11 @@ Then, generate a new project:
 cookiecutter https://github.com/Anonymate054/MCD-CCDS.git
 ```
 
+If the template is from a branch use:
+```bash
+cookiecutter https://github.com/Anonymate054/MCD-CCDS.git -c < branch >
+```
+
 Follow the prompts to customize your project.
 
 # Contributing

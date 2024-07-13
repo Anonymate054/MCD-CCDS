@@ -15,10 +15,16 @@ To use the module inside your notebooks, add `%autoreload` at the top of your no
 %autoreload 2
 ```
 
-Example of module usage :
+Example of module usage for `{{ cookiecutter.project_module_name }}`: 
 
 ```python
 from {{ cookiecutter.project_module_name }}.utils.paths import data_dir
+data_dir()
+```
+Example of module usage for default project modules.
+
+```python
+from scripts.dir_utils import dir_utils
 data_dir()
 ```
 
@@ -41,16 +47,27 @@ Consider the stucture like:
     - Test.ipynb
 - setup.py
 
-Therefore the `setup.py` file must be like:
+Therefore the `setup.py` file must be like this if you want an static modules:
 
 ```python
 from setuptools import setup, find_packages
 
 setup(
-    name='mypackage',
-    version='0.1',
+    ...
     packages=find_packages(include=['mypackage', 'hello', 'goodbye', 'utils']),
-    include_package_data=True,
+    ...
+)
+```
+
+Or keep this stucture in order to search in all prject tree: 
+
+```python
+from setuptools import setup, find_packages
+
+setup(
+    ...
+    packages=find_packages(),
+    ...
 )
 ```
 

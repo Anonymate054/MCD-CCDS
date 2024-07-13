@@ -47,13 +47,24 @@ mamba env create -f environment.yml
 activate {{ cookiecutter.project_slug }}
 ```
 
-### The resulting directory structure
+## Modules and default modules
+
+To install the default modules located in the `scripts` directory, use the following command:
+
+```bash
+pip install --editable .
+```
+
+For more information about the user's modules, refer to `install.md`.
+
+## The resulting directory structure
 
 The directory structure of your new project will look something like this (depending on the settings that you choose):
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
 ├── README.md          <- The top-level README for developers using this project.
+├── {{ cookiecutter.module_name }}         <- User module directory
 ├── data
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
@@ -66,9 +77,9 @@ The directory structure of your new project will look something like this (depen
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+│                         `1.0-anony-initial-data-exploration`.
 │
-tools like black
+├── scripts            <- Default modules and scripts for the project
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
