@@ -64,7 +64,7 @@ The directory structure of your new project will look something like this (depen
 ```
 ├── LICENSE            <- Open-source license if one is chosen
 ├── README.md          <- The top-level README for developers using this project.
-├── {{ cookiecutter.module_name }}         <- User module directory
+├── {{ cookiecutter.project_module_name }}         <- User module directory
 ├── data
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
