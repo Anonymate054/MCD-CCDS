@@ -25,7 +25,7 @@ dependencies:
   - pyjanitor
   - matplotlib
   - seaborn
-{% if cookiecutter.project_packages in ["DS", "Deep"] -%}
+  {% if cookiecutter.project_packages in ["DS", "Deep"] -%}
   - missingno
   - pandas-flavor
   - ydata-profiling
