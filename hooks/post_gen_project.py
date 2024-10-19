@@ -8,6 +8,6 @@ pyspark_path = "{{ cookiecutter.project_name }}/PySpark"
 with open_fs('.') as fs:
     if project_packages != "BigData":
         try:
-            fs.remove_dir(pyspark_path)
+            fs.removedir(pyspark_path)
         except ResourceNotFound:
             pass
