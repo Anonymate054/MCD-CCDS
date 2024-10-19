@@ -22,16 +22,18 @@ The goal of this template is to standardize the structure of data science projec
 
 ## Usage
 
-To generate a new project using this template, you need to have Python and Cookiecutter installed. You can install Cookiecutter using pip:
+To generate a new project using this template, you need to have Python, fs and Cookiecutter installed. You can install Cookiecutter using pip:
 
 ```bash
 pip install cookiecutter
+pip install fs
 ```
 
 or
 
 ```bash
 conda install -c conda-forge cookiecutter
+conda install -c conda-forge fs
 ```
 
 Then, generate a new project:
