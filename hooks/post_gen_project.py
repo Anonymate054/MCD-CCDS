@@ -1,13 +1,13 @@
-import subprocess
+from fs import open_fs
+from fs.errors import ResourceNotFound
 
-MESSAGE_COLOR = "\x1b[34m"
-RESET_ALL = "\x1b[0m"
+project_packages = "{{ cookiecutter.project_packages }}"
 
-print(f"{MESSAGE_COLOR}Almost done!")
-print(f"Initializing a git repository...{RESET_ALL}")
+pyspark_path = "{{ cookiecutter.project_name }}/PySpark"
 
-subprocess.call(['git', 'init'])
-subprocess.call(['git', 'add', '*'])
-subprocess.call(['git', 'commit', '-m', 'Initial commit'])
-
-print(f"{MESSAGE_COLOR}The beginning of your destiny is defined now! Create and have fun!{RESET_ALL}")
+with open_fs('.') as fs:
+    if project_packages != "BigData":
+        try:
+            fs.remove_dir(pyspark_path)
+        except ResourceNotFound:
+            pass

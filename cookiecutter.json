@@ -6,7 +6,7 @@
     "project_analysis" : "Your project analysis section",
     "project_author_email": "Yout email (or your organization/company/team)",
     "project_description": "A short description of the project.",
-    "project_packages": ["Minimal", "DS", "Deep"],
+    "project_packages": ["Minimal", "DS", "Deep", "BigData"],
     "python_version": "3.11",
     "project_version": "0.1.0",
     "project_module_name" : "module",
