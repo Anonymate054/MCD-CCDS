@@ -46,3 +46,6 @@ dependencies:
   - pytorch
   - tensorflow
   {% endif -%}
+  {% if cookiecutter.project_packages == "BigData" -%}
+  - pyspark
+  {% endif -%}
