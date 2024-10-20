@@ -1,13 +1,14 @@
 from fs import open_fs
+import fs.base
 from fs.errors import ResourceNotFound
+
+CURRENT_DIR = open_fs(".")
+PYSPARK_DIR = "{{ cookiecutter.project_name }}/PySpark"
 
 project_packages = "{{ cookiecutter.project_packages }}"
 
-pyspark_path = "{{ cookiecutter.project_name }}/PySpark"
-
-with open_fs('.') as fs:
-    if project_packages != "BigData":
-        try:
-            fs.removedir(pyspark_path)
-        except ResourceNotFound:
-            pass
+if project_packages != "BigData":
+    try:
+        CURRENT_DIR.removetree(PYSPARK_DIR)
+    except ResourceNotFound:
+        print("Fail to remove directory")
