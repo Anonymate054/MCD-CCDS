@@ -1,5 +1,5 @@
+import fs
 from fs import open_fs
-import fs.base
 from fs.errors import ResourceNotFound
 
 CURRENT_DIR = open_fs(".")
