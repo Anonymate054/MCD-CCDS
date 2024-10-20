@@ -3,7 +3,7 @@ from fs import open_fs
 from fs.errors import ResourceNotFound
 
 CURRENT_DIR = open_fs(".")
-PYSPARK_DIR = "{{ cookiecutter.project_name }}/notebooks/PySpark"
+PYSPARK_DIR = CURRENT_DIR.getsyspath("notebooks/PySpark")
 
 project_packages = "{{ cookiecutter.project_packages }}"
 
