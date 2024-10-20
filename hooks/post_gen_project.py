@@ -3,12 +3,12 @@ from fs import open_fs
 from fs.errors import ResourceNotFound
 
 CURRENT_DIR = open_fs(".")
+print(CURRENT_DIR)
 PYSPARK_DIR = CURRENT_DIR.getsyspath("notebooks/PySpark")
+print(PYSPARK_DIR)
 
 project_packages = "{{ cookiecutter.project_packages }}"
 
-print(CURRENT_DIR)
-print(PYSPARK_DIR)
 
 if project_packages != "BigData":
     try:
