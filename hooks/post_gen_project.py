@@ -2,6 +2,7 @@ import fs
 
 CURRENT_DIR = fs.open_fs(".")
 PYSPARK_DIR = CURRENT_DIR.getsyspath("notebooks/PySpark")
+PYSPARK_DIR = "notebooks/PySpark"
 
 project_packages = "{{ cookiecutter.project_packages }}"
 
